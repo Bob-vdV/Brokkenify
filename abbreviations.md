@@ -4,14 +4,6 @@ In this file all the abbreviations from www.icce.rug.nl are listed (as of Decemb
 
 
 ## Implemented:
-### SLV - Single Letter Variable
-
-Please don't use single letter variables. Always use semantically meaningful names. But don't overcompensate by using needlessly long and verbose names.
-
-Aspect: style
-        
-Severity: 3
-
 ### BAK - Blank after keyword
 
 To let keywords stand out, please put a blank after a keyword. So use e.g.: 'for (....)' instead of: 'for(....)'.
@@ -36,6 +28,14 @@ Ubiquitous code like for (int i = 0; i < end; i++) is not a problem: the compile
 
 Aspect: robustness 
 
+Severity: 3
+
+### SLV - Single Letter Variable
+
+Please don't use single letter variables. Always use semantically meaningful names. But don't overcompensate by using needlessly long and verbose names.
+
+Aspect: style
+        
 Severity: 3
 
 ### TABS - Do not use Tabs.

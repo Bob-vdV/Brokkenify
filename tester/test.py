@@ -14,11 +14,11 @@ def check_x(code, abbreviation, regex):
 
 def main():
     checks = {
-        "SLV":  r"(?<= )[a-zA-Z](?=[ =;])",
         "BAK":  r"(?:for|while)\(",
 #       "BABO": r"(?<! )[-+*/^><=]" Does not work, but no priority anyway
         "LTL":   r".{75,}(?=\n)",
         "PP":   r"[a-zA-z_][a-zA-z0-9_]*(?:(?:\+\+)|(?:\-\-))",
+        "SLV": r"(?<= )[a-zA-Z](?=[ =;])",
         "TABS": "\t",
 
 

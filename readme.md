@@ -13,7 +13,7 @@ Note that this means that this program cannot catch everything. See [the abbrevi
 
 
 ### Similar projects
-These are similar projects, though they don't seem to be unfinished and abandoned:
+These are similar projects, though they seem to be unfinished and abandoned:
 - https://github.com/pieter/brokkenbundle
 - https://github.com/jmdejong/brokkenize
 
