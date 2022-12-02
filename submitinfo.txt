@@ -1,0 +1,288 @@
+*Carefully* read the following:
+
+0: This text can also be downloaded from
+
+        https://www.icce.rug.nl/edu/X/cpp/submitinfo.txt
+
+    where X is replaced by the course's part number (1, 2, or 3)
+
+   At the end of this e-mail a summary of the essential steps is provided.
+
+   If anything is unclear, or if something doesn't seem to work, contact
+   Frank, while providing information about:
+
+        - what you did,
+        - the time you did it
+
+   Also, when submitting exercises keep the zip (see below) containing the
+   exercises, at least until you've rceived the rated exercises: if anything
+   is incorrect then we'll have a chance to see what went wrong.
+
+---------------------------------------------------------------------------
+1. Exercises MUST be submitted per set.
+
+    You still can submit subsets of exercises, but we REALLY appreciate it if
+    you submit all of your exercises of a set in one e-mail.
+
+    Do NOT submit exercises of multiple sets in one e-mail.
+
+------------------------------------------------------------------------
+2. All source files MUST compile OK, i.e., without any compiler
+    warnings. Submitted source files are compiled by the latest g++ version
+    compiler (see http://www.icce.rug.nl/edu/ for the currently used version),
+    using the options
+
+        --std=c++20 -Wall -Werror
+
+    Therefore, warnings are considered errors.
+
+------------------------------------------------------------------------
+3. Source files are files having the extension .cc OR .cpp
+    Header files are included in the constructed pdf files as well, and
+    have extensions .h, .ih, or .hh
+
+------------------------------------------------------------------------
+4. All files associated with your exercises must be submitted in a
+    zip-file. Filenames may consist of letters, digits, underscores, followed
+    by an optional dot and an extension. The zip itself should preferably be
+    named after the set you're submitting. E.g., set1.zip, set2.zip etc.
+
+------------------------------------------------------------------------
+5. The zip itself MUST be organized like this:
+
+    * At the top-level a file
+
+        metadata.txt
+
+      MUST exist.
+
+    * Other than that, the top-level MUST contain subdirectories, named after
+      the exercise numbers. So if you're submitting exercises 12, 13, 14 and
+      15 the zip's top-level shows
+
+        metadata.txt
+        12/
+        13/
+        14/
+        15/
+
+------------------------------------------------------------------------
+6.  The metadata.txt file:
+
+    It  MUST contain a line like:
+
+        Set:  Set 1
+
+    The initial 'Set:' is required, the rest should be like the example,
+      but (of course) using the appropriate set number. There are no
+      other specific requirements for the text following 'Set:', just
+      make sure that you specify the number of the set your submission
+      is about.
+
+    It also also MUST contain the line
+
+        Author:
+    or
+        Authors:
+
+    followed by the name(s) of the student(s) who submitted the exercises.
+    Don't just use your first names, because that may be confusing, but also
+    last (family) names. So, instead of (as an example)
+        Authors: Jurjen, Frank
+    use
+        Authors: Jurjen Bokma, Frank Brokken
+
+    It MAY contain a line
+
+        Rater:
+
+    followed by the initials indicating the initial rater (either JB
+    (Jurjen), FB (Frank), RC (Radu), TP (Tomass)or MK (Mattias)). This
+    line must be used if you resubmit your exercises to specify who
+    rated the initially submitted set.
+    Sometimes the initially assigned rater sends you a request to resubmit
+    after a minor modification. In that case you should also specify the
+    initially assigned rater's initials.
+
+    NOTE: if, when resubmitting, you didn't specify the initial rater then a
+    rater is assigned by the mail handler. That rater may rate your exercises,
+    but then the exercises are rated as a first submission, not considering
+    the advice you may have received from the initial rater. In that case
+    you've used your 2nd submission option. Morale: make double sure that you
+    specify the initial rater at resubmissions.
+
+------------------------------------------------------------------------
+7.  EACH exercise directory MUST contain a file
+
+        order.txt
+
+    The order.txt file(s) specify the order in which you would want the files
+    to be printed.
+
+    File specifications in order.txt may NOT refer to parent directories (no
+    ../ etc.) and MUST refer to files located in the exercise's directory or
+    in a one-level deep subdirectory.
+
+    Header files can be listed in order.txt as well: they are not compiled,
+    but may be processed while compiling source files. When including a header
+    file from a subdirectory all source files in that subdirectory must also
+    be specified in order.txt (sometimes you only need the header file itself:
+    see item 8 for that situation).
+
+    Non-source files must have the extension .txt (and must be plain ASCII
+    text files). Multiple .txt files may be specified in order.txt files:
+    their content will appear in the final .pdf at the point where they are
+    specified. E.g., if order.txt contains
+        descr1.txt
+        main.ih
+        descr2.txt
+        main.cc
+    then decr1.txt is shown first, and descr2.txt is shown between main.ih's
+    and main.cc's listings.
+
+    Entries in order.txt containing a - (minus) character are not compiled and
+    won't appear in the final .pdf file. E.g., in the following order.txt file
+    the file usage.cc will be ignored:
+        descr1.txt
+        main.ih
+        descr2.txt
+        main.cc
+        -usage.cc
+    Using - characters in order.txt entries can be convenient when exercises
+    require you to submit subsets of sources.
+
+    Empty lines in order.txt files are OK, but its lines may NOT contain
+    comment.
+
+    If you use make utilities (make, imake, ccbuild ...): fine, but they are
+    irrelevant for the rating and compilation process and should not be
+    included in your .zip. Also, source files that are not part of the
+    exercise should not be included in your .zip, and should not be mentioned
+    in the order.txt file.
+
+    The .zip file may only contain the metadata.txt and order.txt files and
+    the files that are mentioned in the and order.txt files (but see also item
+    8).
+
+    Here is an example of the content of an order.txt file:
+
+explain.txt
+
+main.cc
+
+util/util.h
+util/util.ih
+util/usage.cc
+
+getopt/getopt.h
+getopt/getopt.ih
+getopt/getopt1.cc
+getopt/parselongopt.cc
+getopt/parseshortopts.cc
+getopt/eatoptarg.cc
+getopt/unknownoption.cc
+getopt/requireusage1.cc
+getopt/requireusage2.cc
+
+
+   An example .zip file can be downloaded from
+
+        https://www.icce.rug.nl/edu/X/cpp/set1.zip
+
+    where X is the course part number (so 1, 2, or 3)
+
+------------------------------------------------------------------------
+8.
+
+Sometimes a class must include a previously developed header file which is
+    *not* required by the exercise, but is *only* required for compiling the
+    sources of your exercise. E.g., earlier you created a file enums/enums.h
+    which is required by a class (e.g., 3/tokenizer) that you're submitting.
+
+    Such single header files (e.g., enums/enums.h) must be added to your zip,
+    and enums.h is then the *only* file in the 3/enums/ directory, and
+    enums/enums.h is *not* mentioned in 3/order.txt because it's *not* part of
+    the exercise itself.
+
+    Example:
+        3/order.txt     - lists the source files and .txt files that you are
+                          submitting in this exercise. E.g., the files in the
+                          directory 'tokenizer'
+
+        3/tokenizer/    - contains all files of the class Tokenizer,
+                          required by the exercise
+
+        3/enums/        - merely contains enums.h: enums.h is required
+                          when compiling the sources of the Tokenizer where
+                          its tokenizer.ih (or tokenizer.h) header file
+                          contains the directive
+                            #include "../enums/enums.h"
+
+------------------------------------------------------------------------
+9. Once you have created a .zip, the exercises can be submitted to
+
+                               submit@icce.rug.nl
+
+    You can ONLY submit exercises from the address(es) you used when
+    registering for the C++ course.
+
+    The e-mail's Subject: can be the name of your submitted
+    set. Alternatively, if the Subject: is
+
+        pdf
+
+    then nothing is submitted but only the pdf is constructed which is then
+    returned to the sender for inspection. Make sure you fix layout errors in
+    the pdf (especially lines that are too long) before actually submitting
+    your exercises.
+
+    The e-mail's textual content is irrelevant, but the mail must have one
+    attachment containing the zip-file.
+
+---------------------------------------------------------------------------
+10. If all's well (i.e., the submitted exercises were received in good order
+   then you receive a confirmation (usually it is sent within 5 minutes after
+   submitting an e-mail). If something (anything) went wrong, you receive an
+   e-mail telling you what went wrong.
+
+   If you used another e-mail address than the one you used for registering
+    for this course then your submission is simply ignored, and you receive no
+    reply.
+
+
+---------------------------------------------------------------------------
+11. We (Jurjen, Frank, Maatias, Radu, or Tomass) receive your work as the .zip
+    file, containing the .pdf document. For an illustration of what a .pdf
+    looks like given the abovementioned .zip file's contents. see
+
+        https://www.icce.rug.nl/edu/X/cpp/set1.pdf
+
+---------------------------------------------------------------------------
+12. Summary:
+
+    1. Construct a setX.zip (see items 1..8), with X being the set-number
+
+        metadata.txt must contain at least
+
+            Set: Set X
+            Author: Name of the exercise's author (Authors: also OK)
+
+        Directories below the top level contain 'order.txt' listing the files
+        that should be included in the .pdf document. These files should be
+        source files (.cc, .cpp), header files (.h, .ih, .hh), or text files
+        (.txt), and they are printed in the order they are listed in
+        order.txt.
+
+    2. Send the .zip (as attachment) to submit@icce.rug.nl using as subject
+       either the name of the submitted set, or merely the word
+
+            pdf
+
+---------------------------------------------------------------------------
+13. Finally, in case you're interested, the mailhandler's sources are
+    available in
+
+        https://www.icce.rug.nl/edu/X/cpp/mailhandler.tgz
+
+    They may be updated every now and then, so don't assume what you download
+    at some point is final.

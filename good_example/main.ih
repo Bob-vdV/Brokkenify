@@ -1,0 +1,20 @@
+
+#include "doubles/doubles.hh"
+#include <filesystem>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+// Number of doubles that fit in a file.
+std::uintmax_t count_doubles(std::filesystem::path const &filename);
+
+// Read ascii-formatted doubles out of named file.
+Doubles read_ascii_doubles(std::filesystem::path const &filename);
+
+// Write raw doubles into named file.
+void write_raw_doubles(std::filesystem::path const &filename, Doubles const &doubles);
+
+
+// Strip filename extension (if any).
+std::string strip_extension(std::string const &filename);

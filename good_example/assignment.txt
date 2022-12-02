@@ -1,0 +1,16 @@
+Assignment: Convert text input to binary output.
+
+Input: a text file containing double-precision floating-point numbers,
+       a vector of doubles if you will.
+
+Write a program that does the following:
+- It reads the input file name from the command line.
+- It reads an optional cutoff number from the command line.
+- It reads the numbers from file into memory, and reports the number of items read.
+- If the cutoff is given, it truncates the vector at that number of items.
+- It writes the vector to a binary output file (using whatever representation
+  the numbers have in RAM).
+
+Use a class to represent the vector of doubles.
+
+Submit the source files and (internal) header files you wrote.

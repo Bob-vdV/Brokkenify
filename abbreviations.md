@@ -12,6 +12,15 @@ Aspect: layout
   
 Severity: 1
 
+###C - This looks like C, not C++
+
+Please use C++ rather than C. E.g. use enums instead of preprocessor defines, use static_cast
+(expr) instead of (type)(expr), omit the 'typedef' on structs, and avoid preprocessor MACROs. Once they are introduced, use classes rather than loose functions and structs. Also, include C++ headers (cstdlib), not C headers (stdlib.h).
+
+Aspect: style
+
+Severity: 3
+
 ### LTL - Line Too Long
 
 Please wrap long lines. We sometimes print your code to check it. If your lines are so long that our LaTeX program wraps them for you, wrapped-around comment may show up as code on the next line, or actual code may be broken of mid-identifier. The result usually wouldn't even compile. Please use multiple lines. (That's not the same as multiple statements.) A line may be too long if, when sending the source file to a printer using A4 paper, the line wraps around to the next line or if the line is truncated. That happens to lines longer than about 78 characters.
@@ -189,15 +198,6 @@ Please keep comments short to avoid drowning the code. Longer comments can go at
 Aspect: clarity
 
 Severity: 2
-
-C - This looks like C, not C++
-
-Please use C++ rather than C. E.g. use enums instead of preprocessor defines, use static_cast
-(expr) instead of (type)(expr), omit the 'typedef' on structs, and avoid preprocessor MACROs. Once they are introduced, use classes rather than loose functions and structs. Also, include C++ headers (cstdlib), not C headers (stdlib.h).
-
-Aspect: style
-
-Severity: 3
 
 DECO - Demo Code
 

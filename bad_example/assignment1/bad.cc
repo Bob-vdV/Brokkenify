@@ -15,10 +15,10 @@ int main(){
     x--;
     --x;
 
-//Tab below here, do not touch:
+//Tab below here, do not touch in any IDE:
 	printf("Tab%s", "\n");
 
-	printf("Hello world!!!!!!!!!!!!!\n");printf("hello there\n"); printf("sample text\n");printf("sure hope that the prof doesn't see this\n");printf("whatever\n");
+	printf("Hello world!!!!!!!!!!!!!\n");printf("hello there\n"); printf("sample text\n");printf("sure hope that the prof doesn't see this\n");
 
     return 0;
 }
