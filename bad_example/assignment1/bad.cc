@@ -1,3 +1,7 @@
+/*
+File that should contain most of the 'mistakes' listed in the abbreviations.
+*/
+
 
 #define CONST 4
 
