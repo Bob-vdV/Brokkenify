@@ -1,9 +1,9 @@
+In this file all the abbreviations from www.icce.rug.nl are listed (as of December 2022) and which ones are implemented in the code checker.
 
-icce.rug.nl
-Abbreviations
-33–42 minutes
 
-# Implemented:
+
+
+## Implemented:
 ### SLV - Single Letter Variable
 
 Please don't use single letter variables. Always use semantically meaningful names. But don't overcompensate by using needlessly long and verbose names.
@@ -45,7 +45,7 @@ Aspect: null
     
 Severity: 4
 
-#Won't implement:
+## Won't implement:
 ### BOUNDS - Array bounds were exceeded, or could have been.
 
 Perhaps you defined an array with too few elements. Perhaps you used an index that exceeded the array's bounds (either below 0 or beyond the end). This may lead to segmentation faults, silent data corruption, or merely wrong computations. Please don't ever do this. Using canonical loops (CANON) helps avoid this mistake. Valgrind may also help, but you may have to write tests to cover them (which is a good idea anyway).
@@ -103,7 +103,7 @@ Aspect: integrity
 
 Severity: 5
 
-#Not implemented (yet):
+## Not implemented (yet):
 
 ABC - Align Break and Case
 
