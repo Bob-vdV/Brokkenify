@@ -2,12 +2,13 @@
 File that should contain most of the 'mistakes' listed in the abbreviations.
 */
 
+#include <stdio.h>
 
 #define CONST 4
-
+#define ASSIGNTHREE int x = 3;
 
 int main(){
-    int x = 3;
+    ASSIGNTHREE
     int Y = x;
 
     for(int i=0;i<3;i++){

@@ -4,7 +4,7 @@ import os
 
 checks = {
     "BAK":  r"(?:for|while)\(",
-    "C":    r"#define|malloc|calloc|realloc|typedef|struct|<.+\.h>",
+    "C":    r"(?<=\s)(?:#define\s+\S+\s+\S+.*(?=\n)|malloc|calloc|realloc|typedef|struct|<.+\.h>)(?=\s)",
     #       "BABO": r"(?<! )[-+*/^><=]" Does not work, but no priority anyway
     "LTL":  r".{78,}(?=\n)",
     "PP":   r"[a-zA-z_][a-zA-z0-9_]*(?:(?:\+\+)|(?:\-\-))",
